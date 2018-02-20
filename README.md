@@ -1,2 +1,2 @@
 # Nhi-s-Gallery-
-One of my first test- site, following " Mozilla Developer" instructions
+One of my first test- sites, following " Mozilla Developer" instructions
