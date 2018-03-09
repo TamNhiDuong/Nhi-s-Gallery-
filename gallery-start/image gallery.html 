@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Nhi Duong's Images gallery assesment</title>
+<style>
+.preview {
+width:640px;
+height:360px}
+ 
+.thumb {
+width:114px;
+margin-right:3px;}
+ 
+.normal {
+border:3px solid #000000;}
+ 
+.selected {
+border:3px solid #ff0000;}
+
+html {
+  font-size: 35px;
+  font-family: 'Handlee', cursive;
+  padding: 30px 30px 10px 10px; 
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 26px;  
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+</style>
+</head>
+<body>
+<h1>Nhi's Gallery</h1>
+<p>Welcome to my images gallery</p>
+<img id="0" class="preview normal" src="" alt="preview" /><br />
+<img id="1" class="thumb normal" src="images/pic1.jpg" alt="image1" onmouseover="preview(this)"/>
+<img id="2" class="thumb normal" src="images/pic2.jpg" alt="image2" onmouseover="preview(this)"/>
+<img id="3" class="thumb normal" src="images/pic3.jpg" alt="image3" onmouseover="preview(this)"/>
+<img id="4" class="thumb normal" src="images/pic4.jpg" alt="image3" onmouseover="preview(this)"/>
+<img id="5" class="thumb normal" src="images/pic5.jpg" alt="image3" onmouseover="preview(this)"/>
+<script>
+ 
+    var lastImg = 1; //Set initial thumbnail and preview
+    document.getElementById(0).src = document.getElementById(lastImg).src;
+    document.getElementById(lastImg).className = "thumb selected";
+ 
+    function preview(img) {
+        document.getElementById(lastImg).className = "thumb normal";
+        img.className = "thumb selected";
+        document.getElementById(0).src = img.src;
+        lastImg = img.id
+    }
+</script>
+</body>
+</html>
+ 
